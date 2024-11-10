@@ -87,5 +87,5 @@ This process is valuable for refining factor models, allowing you to use each va
 ## 7. Conclusion
 This analysis demonstrates the value of orthogonalizing style factors to address multicollinearity. By removing the dependency between beta and volatility, we ensure that both factors can be included in a regression or factor model without redundancy, preserving their unique contributions to the model.
 The orthogonalized volatility metric now captures the idiosyncratic risk component of Tesla that is not explained by its market sensitivity (beta), thus enabling a clearer interpretation of the impact of each factor.
-This approach aligns with the principles discussed in the original text, showing that orthogonalization can be an effective strategy to manage multicollinearity among style factors without losing valuable information.
+So we tested that orthogonalization can be an effective strategy to manage multicollinearity among style factors without losing valuable information.
 
