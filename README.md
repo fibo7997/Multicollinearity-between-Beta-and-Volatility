@@ -11,14 +11,19 @@ We used historical data for Tesla, Inc. (TSLA) as the asset of interest due to i
 3. Methodology
    
 Step 1: Calculate Rolling Beta and Volatility
+
 To capture the dynamic relationship between beta and volatility over time, we employed a 60-day rolling window to calculate both metrics:
 - Beta: Calculated by regressing TSLA returns on SPX returns within each window, reflecting Tesla’s sensitivity to the market.
 - Volatility: Calculated as the standard deviation of TSLA’s returns within each window, representing the asset’s inherent risk over that period.
+
 Step 2: Check for Multicollinearity
+
 We calculated the correlation between beta and volatility and also computed the Variance Inflation Factor (VIF) to quantify multicollinearity:
 - A high VIF (> 5) typically indicates multicollinearity, which can destabilize regression models.
 - A positive or strong correlation would suggest redundancy in capturing market exposure through both factors.
+
 Step 3: Orthogonalization of Volatility
+
 To remove multicollinearity while preserving unique information, we orthogonalized volatility by regressing it on beta and using the residuals as the new orthogonalized volatility. This approach ensures that the orthogonalized volatility is uncorrelated with beta, allowing us to include both factors without redundancy.
 
 4. Results
